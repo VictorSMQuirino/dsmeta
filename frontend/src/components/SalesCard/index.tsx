@@ -12,8 +12,8 @@ function SalesCard() {
     const min = new Date(new Date().setDate(new Date().getDate() - 365));
     const max = new Date();
 
-    const [minDate, setMindate] = useState(new Date());
-    const [maxDate, setMaxDate] = useState(new Date());
+    const [minDate, setMindate] = useState(min);
+    const [maxDate, setMaxDate] = useState(max);
 
     const [sales, setSales] = useState<Sale[]>([]);
 
@@ -74,7 +74,7 @@ function SalesCard() {
                                     <td>{sale.amount.toFixed(2)}</td>
                                     <td>
                                         <div className="dsmeta-red-btn-container">
-                                            <NotificationButton />
+                                            <NotificationButton saleId={sale.id}/>
                                         </div>
                                     </td>
                                 </tr>
