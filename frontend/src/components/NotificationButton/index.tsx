@@ -6,7 +6,7 @@ import { BASE_URL } from '../../utils/request';
 import './styles.css'
 
 type Props = {
-    saleId : number;
+    saleId: number;
 }
 
 function handleClick(id : number){
